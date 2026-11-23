@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edit in Infusion - review site</title>
+    <link>https://amb26.github.io/edit-in-infusion-review/</link>
+    <description>Recent content on Edit in Infusion - review site</description>
+    <generator>Infusion 6</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://amb26.github.io/edit-in-infusion-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello from the review site</title>
+      <link>https://amb26.github.io/edit-in-infusion-review/post/hello/</link>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://amb26.github.io/edit-in-infusion-review/post/hello/</guid>
+      <description>This post exists to be edited. Click the “Edit in Infusion” button in your browser’s toolbar, choose Edit this page , and change anything you like - this paragraph, the heading below, or the list. Things to try Change a word of this list, or add an item to it Make some text bold or italic , or add a link Unfold Edit as source in the panel to see your edit as markdown Committing Press Commit in the panel.</description>
+    </item>
+    <item>
+      <title>A second post</title>
+      <link>https://amb26.github.io/edit-in-infusion-review/post/second/</link>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://amb26.github.io/edit-in-infusion-review/post/second/</guid>
+      <description>Another post to edit, so that the list of posts has more than one, and so that an edit held on one post can be seen from another. Edits not yet committed are kept in your browser, and shown on the page until committed or discarded.</description>
+    </item>
+    <item>
+      <title>About this site</title>
+      <link>https://amb26.github.io/edit-in-infusion-review/page/about/</link>
+      <guid>https://amb26.github.io/edit-in-infusion-review/page/about/</guid>
+      <description>This site is built with wend, which renders a site as a tree of Infusion 6 components and publishes each page as plain HTML, with a record of the files it was built from. That record is what the “Edit in Infusion” extension reads to make the page editable in place.</description>
+    </item>
+  </channel>
+</rss>

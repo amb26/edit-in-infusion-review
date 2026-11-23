@@ -1,0 +1,13 @@
+{
+    "//": "How wend builds this site - see packages/wend/js/site.js. Modules are listed from the most general to the site's own, and are published and imported in that order",
+    "modules": {
+        "wend": "packages/wend",
+        "beautifulWend": "packages/beautiful-wend",
+        "reviewSite": "wend"
+    },
+    "root": "beautifulWend.site",
+    "host": "wend/site.html",
+    "editing": "wend/editing.json",
+    "staticDirs": ["packages/beautiful-wend/static", "static"],
+    "overrides": "wend/override"
+}

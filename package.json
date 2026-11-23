@@ -1,0 +1,25 @@
+{
+  "name": "edit-in-infusion-review",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sandbox site built with wend, for review and testing of the \"Edit in Infusion\" browser extension",
+  "scripts": {
+    "build": "node packages/wend/js/buildSite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amb26/edit-in-infusion-review.git"
+  },
+  "author": "Antranig Basman",
+  "license": "ISC",
+  "dependencies": {
+    "infusion-6": "6.5.1",
+    "linkedom": "0.18.9",
+    "markdown-it": "14.3.3",
+    "markdown-it-attrs": "5.0.1",
+    "markdown-it-deflist": "4.0.0",
+    "markdown-it-footnote": "4.0.0",
+    "node-fetch": "3.3.2",
+    "yaml": "2.9.1"
+  }
+}

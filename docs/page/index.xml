@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>page on Edit in Infusion - review site</title>
+    <link>https://amb26.github.io/edit-in-infusion-review/page/</link>
+    <description>Recent content in page on Edit in Infusion - review site</description>
+    <generator>Infusion 6</generator>
+    <language>en</language>
+    <atom:link href="https://amb26.github.io/edit-in-infusion-review/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About this site</title>
+      <link>https://amb26.github.io/edit-in-infusion-review/page/about/</link>
+      <guid>https://amb26.github.io/edit-in-infusion-review/page/about/</guid>
+      <description>This site is built with wend, which renders a site as a tree of Infusion 6 components and publishes each page as plain HTML, with a record of the files it was built from. That record is what the “Edit in Infusion” extension reads to make the page editable in place.</description>
+    </item>
+  </channel>
+</rss>

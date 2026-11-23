@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "commit": null,
+  "infusion": "6.5.1",
+  "template": "sha256-d17acb23e1eff292333f1a593c26afd8128ae9c2638ca305a396a3356ca9376d",
+  "sources": {
+    "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
+    "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
+    "content/post/hello.md": "sha256-7162899ad0813385fcc3d68fa15159cf88b1ad71f744def25338a434c9258bfc",
+    "content/post/second.md": "sha256-d26a7176dabf693c06ef38abaa3a7f60d697041aa43eecdf6878faaaaa44ad5b",
+    "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
+    "wend.json": "sha256-17fe1f85f25eae52116299bd9bfe1948ea92fbdfd5f68f3d9d8bcfd8b84fbdf7"
+  },
+  "pages": {
+    "/": {
+      "title": "Edit in Infusion - review site",
+      "kind": "home",
+      "headings": [],
+      "outputPath": "/index.html",
+      "output": "sha256-174093bfb76b3779d827cf5857ca3d43bf19826cda3b5216dab2a4cd0f19cd56",
+      "inputs": [
+        "#template",
+        "content/post/hello.md",
+        "content/post/second.md"
+      ]
+    },
+    "/post/": {
+      "title": "post",
+      "kind": "section",
+      "headings": [],
+      "outputPath": "/post/index.html",
+      "output": "sha256-72e14e7bfe495551967f4a7e5b4f3463bc89a98a5b922556c8f14a1be447ad3a",
+      "inputs": [
+        "#template",
+        "content/post/hello.md",
+        "content/post/second.md"
+      ]
+    },
+    "/page/": {
+      "title": "page",
+      "kind": "section",
+      "headings": [],
+      "outputPath": "/page/index.html",
+      "output": "sha256-d1860f4d5b2bcd46df89b9454c7c3a76bdef0b4a0bcb7a1c1e0916b2f531f747",
+      "inputs": [
+        "#template",
+        "content/page/about.md"
+      ]
+    },
+    "/post/hello/": {
+      "title": "Hello from the review site",
+      "kind": "page",
+      "headings": [
+        {
+          "id": "things-to-try",
+          "level": 2,
+          "text": "Things to try"
+        },
+        {
+          "id": "committing",
+          "level": 2,
+          "text": "Committing"
+        }
+      ],
+      "outputPath": "/post/hello/index.html",
+      "output": "sha256-ffb3b6fca99ec1c64e05a8689945364ed53a3b6b4b57f7be757b16b67381247e",
+      "inputs": [
+        "#template",
+        "content/post/hello.md"
+      ]
+    },
+    "/post/second/": {
+      "title": "A second post",
+      "kind": "page",
+      "headings": [],
+      "outputPath": "/post/second/index.html",
+      "output": "sha256-a602db0544ae7251fd05080a16ea5ce1e0c8b7c2783d7f37cfde8e50ae271496",
+      "inputs": [
+        "#template",
+        "content/post/second.md"
+      ]
+    },
+    "/page/about/": {
+      "title": "About this site",
+      "kind": "page",
+      "headings": [],
+      "outputPath": "/page/about/index.html",
+      "output": "sha256-05479c8c7d846e207608efd6ae029d2415b31463a2948edd2e785ed4cc60d0c3",
+      "inputs": [
+        "#template",
+        "content/page/about.md"
+      ]
+    },
+    "/tags/": {
+      "title": "tags",
+      "kind": "taxonomy",
+      "headings": [],
+      "outputPath": "/tags/index.html",
+      "output": "sha256-b8a5c16c1545cda9eb2db56679eb2dd787d537ceee19d786bf266325fd8d0cd6",
+      "inputs": [
+        "#template",
+        "content/post/hello.md",
+        "content/post/second.md"
+      ]
+    },
+    "/tags/sandbox/": {
+      "title": "sandbox",
+      "kind": "term",
+      "headings": [],
+      "outputPath": "/tags/sandbox/index.html",
+      "output": "sha256-177abf2a635de59ff0e26a962143fcbd663d50a08ef12b660e14dbef8d65670f",
+      "inputs": [
+        "#template",
+        "content/post/hello.md",
+        "content/post/second.md"
+      ]
+    },
+    "/categories/": {
+      "title": "categories",
+      "kind": "taxonomy",
+      "headings": [],
+      "outputPath": "/categories/index.html",
+      "output": "sha256-e2b9b66e0654ad0b2ab0e82d10522ef1a6e974d865de823234a2c623e93642a3",
+      "inputs": [
+        "#template"
+      ]
+    },
+    "/404.html": {
+      "title": "404 Page not found",
+      "kind": "404",
+      "headings": [],
+      "outputPath": "/404.html",
+      "output": "sha256-8f49f0fa5f1977769ac90e3cc6abd762b46d4ee7c46a2b3d57f6a2e430d49f15",
+      "inputs": [
+        "#template"
+      ]
+    }
+  },
+  "assets": [
+    "/img/pond.jpg"
+  ],
+  "staticFiles": {
+    "static/img/pond.jpg": "sha256-4860c3a27fef560c491af335e53a588f03631547b8e0f4abf2195d31520083c0"
+  }
+}

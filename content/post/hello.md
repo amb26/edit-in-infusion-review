@@ -4,8 +4,9 @@ date: 2026-11-23
 tags: [sandbox]
 ---
 
-This post exists to be edited. Click the "Edit in Infusion" button in your browser's toolbar, choose **Edit this
-page**, and change anything you like - this paragraph, the heading below, or the list.
+This post exists to be edited. Click the “Edit in Infusion” button in your browser’s toolbar, choose **Edit this
+page**, and change anything you like - this paragraph, the heading below, or the list. You can even change these
+words here! Or here.
 
 ## Things to try
 
@@ -16,5 +17,7 @@ page**, and change anything you like - this paragraph, the heading below, or the
 ## Committing
 
 Press **Commit** in the panel. The extension shows you the change in a window of its own, and once you confirm it,
-commits it to this site's repository. The site is rebuilt in a minute or two, and the panel then shows your edit as
+commits it to this site’s repository. The site is rebuilt in a minute or two, and the panel then shows your edit as
 published.
+
+&nbsp;

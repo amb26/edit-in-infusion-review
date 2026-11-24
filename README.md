@@ -4,8 +4,9 @@ A sandbox site built with **wend**, which exists only so that the "Edit in Infus
 out - by the Chrome Web Store's reviewers, among others - without access to any real site. Every edit made through the
 extension is committed to this repository, and the site is rebuilt from it.
 
-`packages/wend` and `packages/beautiful-wend` are copies of those in [amb26/ponder](https://github.com/amb26/ponder),
-whose README describes the layout of a wend site.
+It is built with the npm packages `@fluid-project/wend` and its theme `@fluid-project/wend-theme-beautiful`, released from `packages/` of
+[Infusion 6's repository](https://github.com/fluid-project/infusion-6). The README of
+[amb26/ponder](https://github.com/amb26/ponder) describes the layout of a wend site.
 
 ## Building
 

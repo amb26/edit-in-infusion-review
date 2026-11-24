@@ -1,8 +1,8 @@
 {
   "version": 1,
   "commit": null,
-  "infusion": "6.5.1",
-  "template": "sha256-d17acb23e1eff292333f1a593c26afd8128ae9c2638ca305a396a3356ca9376d",
+  "infusion": "6.6.0",
+  "template": "sha256-cdaa60430e73b92197ce9f79ec0eeb6b9ca98f26ca5d3654b9d4e7272b4377fe",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
@@ -17,7 +17,7 @@
       "kind": "home",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-174093bfb76b3779d827cf5857ca3d43bf19826cda3b5216dab2a4cd0f19cd56",
+      "output": "sha256-5f0ef96c8a6930e6483526f39462935580ca8dfe1e5d53e636e69ac1e0443172",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -29,7 +29,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-72e14e7bfe495551967f4a7e5b4f3463bc89a98a5b922556c8f14a1be447ad3a",
+      "output": "sha256-8fada2d0b12e19b98a944bceacdc5af631f5e60b3e7cd0cb8be4733b2b18e216",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -41,7 +41,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/page/index.html",
-      "output": "sha256-d1860f4d5b2bcd46df89b9454c7c3a76bdef0b4a0bcb7a1c1e0916b2f531f747",
+      "output": "sha256-75fbc3f28dfbc57d86e35fed4433dd59a28e2a981b9aac10d59d295523c6cbc7",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -63,7 +63,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-ffb3b6fca99ec1c64e05a8689945364ed53a3b6b4b57f7be757b16b67381247e",
+      "output": "sha256-40ed99918eda1aafbb7e4956d43f0283349c375dc10477b2455737df42d407dd",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -74,7 +74,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/post/second/index.html",
-      "output": "sha256-a602db0544ae7251fd05080a16ea5ce1e0c8b7c2783d7f37cfde8e50ae271496",
+      "output": "sha256-f1232c8d15979c2713b46b4cb0fdcd637f0783b73e62ad76674501029cb111fd",
       "inputs": [
         "#template",
         "content/post/second.md"
@@ -85,7 +85,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/page/about/index.html",
-      "output": "sha256-05479c8c7d846e207608efd6ae029d2415b31463a2948edd2e785ed4cc60d0c3",
+      "output": "sha256-ff575a9e01e428e297bd9e1dd7c05f0682464971542be690e7d5b15c8ae59dff",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -96,7 +96,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/tags/index.html",
-      "output": "sha256-b8a5c16c1545cda9eb2db56679eb2dd787d537ceee19d786bf266325fd8d0cd6",
+      "output": "sha256-e8d5ac2ec2ff6f18b572ecb7b11b129ea205779a7254875ebf078326a115bf68",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -108,7 +108,7 @@
       "kind": "term",
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-177abf2a635de59ff0e26a962143fcbd663d50a08ef12b660e14dbef8d65670f",
+      "output": "sha256-acc0af2cfec27cbd5141ac60b069721c18e2cf14dc1c279f4b8bd060d6bd4b04",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -120,7 +120,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/categories/index.html",
-      "output": "sha256-e2b9b66e0654ad0b2ab0e82d10522ef1a6e974d865de823234a2c623e93642a3",
+      "output": "sha256-f9032bc0ceb9a8abbf049f1f975c3105c839c256f72a8e0038182c02b39d072b",
       "inputs": [
         "#template"
       ]
@@ -130,7 +130,7 @@
       "kind": "404",
       "headings": [],
       "outputPath": "/404.html",
-      "output": "sha256-8f49f0fa5f1977769ac90e3cc6abd762b46d4ee7c46a2b3d57f6a2e430d49f15",
+      "output": "sha256-a9a4bd40472aacd1cd94f00a99c0162b0c5c0793bcbb175ad50a4028c67ecf9b",
       "inputs": [
         "#template"
       ]

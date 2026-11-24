@@ -3,14 +3,16 @@
  "infusion": "6.6.0",
  "documents": {
   "https://amb26.github.io/edit-in-infusion-review/": {
-   "effects": 119,
+   "effects": 125,
    "sources": [
     "content/post/hello.md",
     "content/post/second.md"
    ],
    "inputs": {
+    "argument 0 of $compute at path avatar of component at path document.header": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "argument 0 of template call beautifulWend.header.subtitleAs({header}.subtitle, {header}.type, h2) at path document.header": "sha256-260b7f6b17605e9222e6ec0d7dc8a1357ded5a93d5f116090ccc8c12b09fce5a",
     "argument 0 of template call beautifulWend.header.subtitleAs({header}.subtitle, {header}.type, span) at path document.header": "sha256-260b7f6b17605e9222e6ec0d7dc8a1357ded5a93d5f116090ccc8c12b09fce5a",
+    "argument 1 of $compute at path avatar of component at path document.header": "sha256-f2b45cc9f40ed92c36b4792f291d8131bcad8d5fc316f23beffb27f31a5f8bb2",
     "argument 1 of $compute at path dateText of component at path document.main.previews.0.postMeta": "sha256-515ec1ca027b7da4dc500133a20bb93d476f0eda643a0c5484654c18a5b09c17",
     "argument 1 of $compute at path dateText of component at path document.main.previews.1.postMeta": "sha256-515ec1ca027b7da4dc500133a20bb93d476f0eda643a0c5484654c18a5b09c17",
     "argument 1 of $compute at path shareImage of component at path document.head": "sha256-f2b45cc9f40ed92c36b4792f291d8131bcad8d5fc316f23beffb27f31a5f8bb2",
@@ -28,12 +30,12 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "layer beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
-    "layer beautifulWend.header.home": "sha256-20d58e2e50ed226f9b70795074c69930b3d36d8ca54b66dab87c8cd65c5114b9",
+    "layer beautifulWend.header.home": "sha256-73c7a3d8c95f6e0d7023c2c2a3763a2cc3e7392502d0f3c45d6d1ede353fd8d8",
     "layer beautifulWend.i18n": "sha256-2aaf19455353ad657d0a7ad4228f272a62b50d290a283e06ee5d99d19247f489",
     "layer beautifulWend.i18n.en": "sha256-1129d5efb051cb6bfe8e841ed1bca09183d718b182d5db876057ee16405d0d5e",
     "layer beautifulWend.kind.home": "sha256-27dcce772621f8245ed25e659c7a7a0fd0548710a08ebd4a0bd18a53c93966df",
@@ -83,7 +85,7 @@
     "model site.documents.0.main.previews.0.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.0.main.previews.1.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.0.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.0.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.0.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/]": "sha256-1789524d05f0ce6a55f5db1f5d60b791078985a8176546004009a320903c3dc3",
     "model site.pages[/].content": "sha256-b852170e132c4a4fa16af0d57a2472437d641d4d92008a7c3dc70caf373e5b7a",
     "model site.pages[/].description": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
@@ -121,11 +123,11 @@
     "model site.pages[/post/second/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/post/second/].title": "sha256-b49b3d3653f3ab7aaa2a103e023d5c73961f4cdc99f8b0358dd9f8dbd1fb46c4",
     "model site.pages[/post/second/].truncated": "sha256-fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
-    "template beautifulWend.header.home": "sha256-20d58e2e50ed226f9b70795074c69930b3d36d8ca54b66dab87c8cd65c5114b9",
+    "template beautifulWend.header.home": "sha256-73c7a3d8c95f6e0d7023c2c2a3763a2cc3e7392502d0f3c45d6d1ede353fd8d8",
     "template beautifulWend.main.home": "sha256-f767c2a2dbe21a45bc07aaf9abf6bef6408169422900f43f78ac3c3878046a66",
     "template beautifulWend.mediaIcons": "sha256-f2ed50adbd9622ac32fbb4d166367d471c6226939bccffb7dc638cc833420e75",
     "template beautifulWend.navItem.leaf": "sha256-666a20be25a3c8df50da17e8c2a3a26ad1d491428f04c5e7aa5ca8c9dc5e6238",
@@ -138,7 +140,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/post/": {
-   "effects": 108,
+   "effects": 112,
    "sources": [
     "content/post/hello.md",
     "content/post/second.md"
@@ -161,7 +163,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -208,7 +210,7 @@
     "model site.documents.1.main.previews.0.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.1.main.previews.1.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.1.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.1.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.1.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/post/]": "sha256-5f47ab6111ac60fceadcc065f917e7a74b89d013f1e4531147cac23a0ba740ef",
     "model site.pages[/post/].content": "sha256-12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
     "model site.pages[/post/].description": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
@@ -246,7 +248,7 @@
     "model site.pages[/post/second/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/post/second/].title": "sha256-b49b3d3653f3ab7aaa2a103e023d5c73961f4cdc99f8b0358dd9f8dbd1fb46c4",
     "model site.pages[/post/second/].truncated": "sha256-fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -261,7 +263,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/page/": {
-   "effects": 86,
+   "effects": 90,
    "sources": [
     "content/page/about.md"
    ],
@@ -280,7 +282,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -324,7 +326,7 @@
     "model site.documents.2.headScripts (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.2.main.listedPages (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.2.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.2.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.2.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/page/]": "sha256-8741ba458ccebf4066d52f468c60b13599cdaeb8c5a9a0c4973ea3f31b2d5b2c",
     "model site.pages[/page/].content": "sha256-12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
     "model site.pages[/page/].description": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
@@ -350,7 +352,7 @@
     "model site.pages[/page/about/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/page/about/].title": "sha256-5b6cc669bde86706f08f392fcc229f01bba651d31fdbf19596d920a96c1cc22b",
     "model site.pages[/page/about/].truncated": "sha256-fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -364,7 +366,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/post/hello/": {
-   "effects": 92,
+   "effects": 96,
    "sources": [
     "content/post/hello.md"
    ],
@@ -385,7 +387,7 @@
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
     "computed site.relatedIndex": "sha256-89203e39d88d7fa8d471d375769be6083d20dbc9b37d41857016505d8a1da43e",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -440,7 +442,7 @@
     "model site.documents.3.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.3.page.prevInSection.relPermalink": "sha256-a5af5bd5ceb802ecdbe6e569fc4dd9fd8d425ff300deb8164d2689fdfb38755e",
     "model site.documents.3.page.prevInSection.title": "sha256-b49b3d3653f3ab7aaa2a103e023d5c73961f4cdc99f8b0358dd9f8dbd1fb46c4",
-    "model site.documents.3.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.3.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/post/hello/]": "sha256-98d8be1a69fbaaa7ed06f17a52963957a6345de0404ff1235f54f37cb1cb47c1",
     "model site.pages[/post/hello/].content": "sha256-d6c8ce72eae332804d5de0e53d91f3493d3cc96e4996c70e323df51d0de72a45",
     "model site.pages[/post/hello/].date": "sha256-29d8ee7f4f4bd30d762ff9fa2455557c259e2165e80db82d3639715d76366773",
@@ -458,7 +460,7 @@
     "model site.pages[/post/hello/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/post/hello/].title": "sha256-b9cd030d71411e5ed259d167af286031ad3545b0d93dfefc7a0928cbd40545fd",
     "model site.pages[/post/hello/].type": "sha256-751c1407721fe6e0c45cf5f05f59954b8aa75364595ba6b32abb051a6b0dc09e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -474,7 +476,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/post/second/": {
-   "effects": 92,
+   "effects": 96,
    "sources": [
     "content/post/second.md"
    ],
@@ -495,7 +497,7 @@
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
     "computed site.relatedIndex": "sha256-89203e39d88d7fa8d471d375769be6083d20dbc9b37d41857016505d8a1da43e",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -550,7 +552,7 @@
     "model site.documents.4.page.nextInSection.relPermalink": "sha256-dceb15193829aca286ff3dd5324a0ad6f67bce2a99a0bbdd18c85250a69f5155",
     "model site.documents.4.page.nextInSection.title": "sha256-b9cd030d71411e5ed259d167af286031ad3545b0d93dfefc7a0928cbd40545fd",
     "model site.documents.4.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
-    "model site.documents.4.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.4.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/post/second/]": "sha256-65bc56c942c6afcb73c3120417b40de5a03962337db85e72dfd12d65e1a7ea50",
     "model site.pages[/post/second/].content": "sha256-4d926ba5503b07981c38d021f6e4ae0990ee6a4d256f91ca5ab0385115acb02b",
     "model site.pages[/post/second/].date": "sha256-ade8b976cba02a9c5408fe0c3dad2a3495b8a6a2c09810ce5afc7b094844864d",
@@ -568,7 +570,7 @@
     "model site.pages[/post/second/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/post/second/].title": "sha256-b49b3d3653f3ab7aaa2a103e023d5c73961f4cdc99f8b0358dd9f8dbd1fb46c4",
     "model site.pages[/post/second/].type": "sha256-751c1407721fe6e0c45cf5f05f59954b8aa75364595ba6b32abb051a6b0dc09e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -584,7 +586,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/page/about/": {
-   "effects": 82,
+   "effects": 86,
    "sources": [
     "content/page/about.md"
    ],
@@ -604,7 +606,7 @@
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
     "computed site.relatedIndex": "sha256-89203e39d88d7fa8d471d375769be6083d20dbc9b37d41857016505d8a1da43e",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -653,7 +655,7 @@
     "model site.documents.5.head.customStylesheets (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.5.headScripts (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.5.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.5.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.5.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/page/about/]": "sha256-80ec0395e8e99d46ee21849219dd01d94c7187dc475647282d0597f49e00a2e1",
     "model site.pages[/page/about/].content": "sha256-fa394d728fae8330569253d9386a91481848f9c116bc5df8968ac115f44a382f",
     "model site.pages[/page/about/].date": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
@@ -669,7 +671,7 @@
     "model site.pages[/page/about/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/page/about/].title": "sha256-5b6cc669bde86706f08f392fcc229f01bba651d31fdbf19596d920a96c1cc22b",
     "model site.pages[/page/about/].type": "sha256-861424bc7e8c804146c9e7eb0b516385deb10194de8c499a610211cee07832d8",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -682,7 +684,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/tags/": {
-   "effects": 90,
+   "effects": 94,
    "sources": [
     "content/post/hello.md",
     "content/post/second.md"
@@ -699,7 +701,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -743,7 +745,7 @@
     "model site.documents.6.page.data.terms (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.6.page.data.terms.0.count": "sha256-d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
     "model site.documents.6.page.data.terms.0.name": "sha256-c824890cc7793bd8b5e74ac60dfa01076f4955e21b86327183cb6f50cd353989",
-    "model site.documents.6.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.6.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/post/hello/].relPermalink": "sha256-dceb15193829aca286ff3dd5324a0ad6f67bce2a99a0bbdd18c85250a69f5155",
     "model site.pages[/post/hello/].title": "sha256-b9cd030d71411e5ed259d167af286031ad3545b0d93dfefc7a0928cbd40545fd",
     "model site.pages[/post/second/].relPermalink": "sha256-a5af5bd5ceb802ecdbe6e569fc4dd9fd8d425ff300deb8164d2689fdfb38755e",
@@ -763,7 +765,7 @@
     "model site.pages[/tags/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/tags/].title": "sha256-a142d7f235356ecab1d788c33d33cbdd7ca0e1d5b1b7ae4cc8631b862b7b9e28",
     "model site.pages[/tags/].type": "sha256-dcb452a982945e5e2957930d83d36af5ceee19805ec0c3b30529ae8f44f6e49e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -776,7 +778,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/tags/sandbox/": {
-   "effects": 108,
+   "effects": 112,
    "sources": [
     "content/post/hello.md",
     "content/post/second.md"
@@ -799,7 +801,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -846,7 +848,7 @@
     "model site.documents.7.main.previews.0.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.7.main.previews.1.page.params.tags (keys)": "sha256-a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
     "model site.documents.7.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.7.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.7.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/post/hello/]": "sha256-98d8be1a69fbaaa7ed06f17a52963957a6345de0404ff1235f54f37cb1cb47c1",
     "model site.pages[/post/hello/].date": "sha256-29d8ee7f4f4bd30d762ff9fa2455557c259e2165e80db82d3639715d76366773",
     "model site.pages[/post/hello/].params.image": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
@@ -886,7 +888,7 @@
     "model site.pages[/tags/sandbox/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/tags/sandbox/].title": "sha256-c824890cc7793bd8b5e74ac60dfa01076f4955e21b86327183cb6f50cd353989",
     "model site.pages[/tags/sandbox/].type": "sha256-dcb452a982945e5e2957930d83d36af5ceee19805ec0c3b30529ae8f44f6e49e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -901,7 +903,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/categories/": {
-   "effects": 78,
+   "effects": 82,
    "sources": [],
    "inputs": {
     "argument 1 of $compute at path shareImage of component at path document.head": "sha256-f2b45cc9f40ed92c36b4792f291d8131bcad8d5fc316f23beffb27f31a5f8bb2",
@@ -915,7 +917,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -955,7 +957,7 @@
     "model site.documents.8.headScripts (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.8.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
     "model site.documents.8.page.data.terms (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "model site.documents.8.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.8.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/categories/]": "sha256-0512f97546892fd617dfbe13989c1bb18270884a769cd52c5806914bbbbfa9ae",
     "model site.pages[/categories/].data": "sha256-bd98ee6edb22327d81f17d3c9926ae2529c83ebe50777ad06bf4a6326a49bf1d",
     "model site.pages[/categories/].data.plural": "sha256-dcb1a2e4822f96c6e599e3a46148afdf2b4241a09ee307306035e5eceabd0970",
@@ -970,7 +972,7 @@
     "model site.pages[/categories/].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/categories/].title": "sha256-dcb1a2e4822f96c6e599e3a46148afdf2b4241a09ee307306035e5eceabd0970",
     "model site.pages[/categories/].type": "sha256-dcb452a982945e5e2957930d83d36af5ceee19805ec0c3b30529ae8f44f6e49e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.header": "sha256-143825d14b8e550ed2f4661fb4d7cf874c139460086e25efab94100d40177314",
@@ -982,7 +984,7 @@
    }
   },
   "https://amb26.github.io/edit-in-infusion-review/404.html": {
-   "effects": 75,
+   "effects": 79,
    "sources": [],
    "inputs": {
     "argument 0 of $compute at path baseHref of component at path document.head": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
@@ -996,7 +998,7 @@
     "computed site.i18n.strings.toggleNavigation": "sha256-c4318422564564bcf5f6218adfc311bbcc24ed9c894147a0be96b270bde5896f",
     "computed site.lang": "sha256-50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
     "computed site.menu": "sha256-6fde435c6db1e68b7574f6c2015b4df4e0bb0dc98875b74c53aea75cae7309ea",
-    "layer beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "layer beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "layer beautifulWend.document.selfHosted": "sha256-05964f991140117111fef75517752a0f4aa91cd9223f6748dc821d28a1a14b28",
     "layer beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "layer beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
@@ -1034,7 +1036,7 @@
     "model site.documents.9.head.customStylesheets (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.9.headScripts (keys)": "sha256-4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "model site.documents.9.navbar.allItems (keys)": "sha256-53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
-    "model site.documents.9.stylesheets (keys)": "sha256-a374c70701b8f5e89e1ea6d88e0404513357be17f0ac2deb952ce7a1bd1dda8b",
+    "model site.documents.9.stylesheets (keys)": "sha256-b4b4f5fa764f748b4541d72d31c06588a8c8bae797d7dfbb1dd537dadff89178",
     "model site.pages[/404.html]": "sha256-78e34a46de60cbdaead55e0a3e709d39e3b337d44a585abb6a1588dc24c2615d",
     "model site.pages[/404.html].description": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/404.html].kind": "sha256-3332300cb375f3fb00ce2e3e1e73770f115fd39602012847a83f08327ced169f",
@@ -1045,7 +1047,7 @@
     "model site.pages[/404.html].then": "sha256-eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c",
     "model site.pages[/404.html].title": "sha256-03ad789d7732ab824697654735223009e72515cd86566f86ca1b69c6948a1010",
     "model site.pages[/404.html].type": "sha256-dcb452a982945e5e2957930d83d36af5ceee19805ec0c3b30529ae8f44f6e49e",
-    "template beautifulWend.document": "sha256-c1e13a790cbcdba4497050bf4e8b132255bf96e29b1581bdc37ffd27db6824ea",
+    "template beautifulWend.document": "sha256-18e3780a65d60d3f61bdd8ac900e3e8b8fd97dad7d0e4208aa03dcdf363672de",
     "template beautifulWend.footer": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "template beautifulWend.head": "sha256-a40e9d0b047af1c1988be151b1fab43db5d22fda59f2c4f4485081c14ddf0554",
     "template beautifulWend.main.notFound": "sha256-2b8021db8a7c094179fa7efd1fca33a3b1c692d717c7c9fe870cd49092162df6",

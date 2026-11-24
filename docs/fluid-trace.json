@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "commit": "93cfc61fc3fccc61618d136243a6ff5450ed0144",
+  "commit": "f82aa239f2b9768cdb7cf580bd27892d68d9caed",
   "infusion": "6.6.0",
-  "template": "sha256-cdaa60430e73b92197ce9f79ec0eeb6b9ca98f26ca5d3654b9d4e7272b4377fe",
+  "template": "sha256-6b5e176138eb3a91350983c91730a914280dad666169bb0c7180c0b079c26526",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
@@ -17,7 +17,7 @@
       "kind": "home",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-475628c3755a3c410726c3f75e961f0a4e7eb0f1ebee946074b35d910ad5ebb3",
+      "output": "sha256-aa4d42b6215e411a4bc04410b8ff79f61011151b1b4088224dbf361493d6f9cc",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -29,7 +29,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-403535279198c88cfd5c6ae9039b92fb2f783d73d75b53fe77ef4a572809fb72",
+      "output": "sha256-94771fef14938b49040c87112ee0856942f27486c79974069efa5f1e6b933f3b",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -41,7 +41,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/page/index.html",
-      "output": "sha256-75fbc3f28dfbc57d86e35fed4433dd59a28e2a981b9aac10d59d295523c6cbc7",
+      "output": "sha256-bdd03f5609cc21be3f35ce138617ff178400d8236b74990cff4bcec84a2eee6a",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -63,7 +63,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-c1dbf6a569632f3591767f1c14f9fc7d17d524159cd7c0f0dac6089f2444661e",
+      "output": "sha256-d98dfcc612a73af22529d58857d6df6f9882061c1c6a04d0f9661aeac32e7607",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -74,7 +74,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/post/second/index.html",
-      "output": "sha256-f1232c8d15979c2713b46b4cb0fdcd637f0783b73e62ad76674501029cb111fd",
+      "output": "sha256-3332ff462687caa8ff179a0494a93e433828f6d18b6a5677a5bef9a2b3585de2",
       "inputs": [
         "#template",
         "content/post/second.md"
@@ -85,7 +85,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/page/about/index.html",
-      "output": "sha256-ff575a9e01e428e297bd9e1dd7c05f0682464971542be690e7d5b15c8ae59dff",
+      "output": "sha256-94d90136bc68625a468c3c464a9f45de4da098f6516bb09eeed5ed8cd3b82bf1",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -96,7 +96,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/tags/index.html",
-      "output": "sha256-e8d5ac2ec2ff6f18b572ecb7b11b129ea205779a7254875ebf078326a115bf68",
+      "output": "sha256-c7b4bc4e380650d0a0873da465b718062144fe1cd4353fa01ce484813d001159",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -108,7 +108,7 @@
       "kind": "term",
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-35d745c71d101d2752c7f69557579ae1a72d18ee57813a49f65adcb14fe727a8",
+      "output": "sha256-8834941d3eedb2bb207a74c6890e9cb435f37221caf5d0ed52f9659bea4cea99",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -120,7 +120,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/categories/index.html",
-      "output": "sha256-f9032bc0ceb9a8abbf049f1f975c3105c839c256f72a8e0038182c02b39d072b",
+      "output": "sha256-56190b217dbc15f187fb6c4be2b1272888a47c525cbdbe70c0445d8c8e1855ea",
       "inputs": [
         "#template"
       ]
@@ -130,7 +130,7 @@
       "kind": "404",
       "headings": [],
       "outputPath": "/404.html",
-      "output": "sha256-a9a4bd40472aacd1cd94f00a99c0162b0c5c0793bcbb175ad50a4028c67ecf9b",
+      "output": "sha256-d0d7c1584ab36eb95dcfe7fd8be93c9eb64722dcbf2c92d9e8f71c17cc8f3326",
       "inputs": [
         "#template"
       ]

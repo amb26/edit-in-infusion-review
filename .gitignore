@@ -5,3 +5,6 @@ node_modules/
 
 # Names a local checkout of Infusion 6 to build against - never committed
 moduleOverrides.json5
+
+# The bases of the site held as git repositories, fetched by wend-fetch-bases - never committed
+.wend/

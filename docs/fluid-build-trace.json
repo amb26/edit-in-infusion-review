@@ -2,6 +2,98 @@
  "version": 1,
  "infusion": "6.6.0",
  "documents": {
+  "https://amb26.github.io/edit-in-infusion-review/post/page/1/": {
+   "effects": 5,
+   "sources": [],
+   "inputs": {
+    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
+    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
+    "layer fluid.component": "infusion-6@6.6.0",
+    "layer fluid.componentList": "infusion-6@6.6.0",
+    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
+    "layer fluid.resolveRoot": "infusion-6@6.6.0",
+    "layer fluid.sfcLayer": "infusion-6@6.6.0",
+    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.viewComponent": "infusion-6@6.6.0",
+    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/]": "sha256-f9bba4229efabf74337bbcc40e8d3fbaf2cc416d040f61b5c5bafcb603656709",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/].permalink": "sha256-dc2a2d978eac1cd15441693e4f2057813041da9397230c40209ffe0c2c173e21",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/].target": "sha256-e8e0fd13e69492275019a92150929af9eb9b018fc8a725daeca6af13b3e5d858",
+    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
+   }
+  },
+  "https://amb26.github.io/edit-in-infusion-review/page/page/1/": {
+   "effects": 5,
+   "sources": [],
+   "inputs": {
+    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
+    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
+    "layer fluid.component": "infusion-6@6.6.0",
+    "layer fluid.componentList": "infusion-6@6.6.0",
+    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
+    "layer fluid.resolveRoot": "infusion-6@6.6.0",
+    "layer fluid.sfcLayer": "infusion-6@6.6.0",
+    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.viewComponent": "infusion-6@6.6.0",
+    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/]": "sha256-4979abc4f9d26df1610a70bafcb0a1308a08c4ff71464bc2007a342acdbe6f3a",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/].permalink": "sha256-bb02aaee96e74179f007230d60a2de2334ae630725987244d948f138d4085e22",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/].target": "sha256-663021982d60eecb1dcbb5493dc32b5b92def9dc062806948093b68c1844882e",
+    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
+   }
+  },
+  "https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/": {
+   "effects": 5,
+   "sources": [],
+   "inputs": {
+    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
+    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
+    "layer fluid.component": "infusion-6@6.6.0",
+    "layer fluid.componentList": "infusion-6@6.6.0",
+    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
+    "layer fluid.resolveRoot": "infusion-6@6.6.0",
+    "layer fluid.sfcLayer": "infusion-6@6.6.0",
+    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.viewComponent": "infusion-6@6.6.0",
+    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/]": "sha256-e579319743e137b9698b0e96cd21fd4f0a7115769e0b514409ed5417a90b51c0",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/].permalink": "sha256-fbb5cf1f6f8ab39fe3655e138ab772209ee18c2a1103c67912d6bdc0236a6e99",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/].target": "sha256-a457ed2e85b81c3e9dea14f295af47295532416ecf487b61b4fa05f60964e38b",
+    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
+   }
+  },
+  "https://amb26.github.io/edit-in-infusion-review/page/1/": {
+   "effects": 5,
+   "sources": [],
+   "inputs": {
+    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
+    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
+    "layer fluid.component": "infusion-6@6.6.0",
+    "layer fluid.componentList": "infusion-6@6.6.0",
+    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
+    "layer fluid.resolveRoot": "infusion-6@6.6.0",
+    "layer fluid.sfcLayer": "infusion-6@6.6.0",
+    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
+    "layer fluid.viewComponent": "infusion-6@6.6.0",
+    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/]": "sha256-244c6748461120ea78ca72cc303851c16c01b1bd0eb6b9767c8cdce16e8ad246",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/].permalink": "sha256-7f6d455e99ff1a5f801aff414ae0d853e723e7a25d3dd7726ca01c9d9b336277",
+    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/].target": "sha256-41f8b17bd294e9f617635ef9bd4d2f0eb3c4ce7e40996ffee02205a4e1000247",
+    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
+    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
+   }
+  },
   "https://amb26.github.io/edit-in-infusion-review/": {
    "effects": 119,
    "sources": [
@@ -1053,98 +1145,6 @@
     "template beautifulWend.navbar": "sha256-7c0e5b12cef631b97ea4bc1c578bb3a2fab34f9876524569bfc298c338017b20",
     "template wend.scriptTag": "sha256-4cae9006867662da0596a805c0829baf60e5b00bdbbea661b05eba9ab4b7ab38",
     "template wend.stylesheetTag": "sha256-83ea4313d1e1e922570cc8cec73c8810f0b205f3bad9f5cb21ed54e034cd43e6"
-   }
-  },
-  "https://amb26.github.io/edit-in-infusion-review/post/page/1/": {
-   "effects": 5,
-   "sources": [],
-   "inputs": {
-    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
-    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
-    "layer fluid.component": "infusion-6@6.6.0",
-    "layer fluid.componentList": "infusion-6@6.6.0",
-    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
-    "layer fluid.resolveRoot": "infusion-6@6.6.0",
-    "layer fluid.sfcLayer": "infusion-6@6.6.0",
-    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.viewComponent": "infusion-6@6.6.0",
-    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/]": "sha256-f9bba4229efabf74337bbcc40e8d3fbaf2cc416d040f61b5c5bafcb603656709",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/].permalink": "sha256-dc2a2d978eac1cd15441693e4f2057813041da9397230c40209ffe0c2c173e21",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/post/page/1/].target": "sha256-e8e0fd13e69492275019a92150929af9eb9b018fc8a725daeca6af13b3e5d858",
-    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
-   }
-  },
-  "https://amb26.github.io/edit-in-infusion-review/page/page/1/": {
-   "effects": 5,
-   "sources": [],
-   "inputs": {
-    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
-    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
-    "layer fluid.component": "infusion-6@6.6.0",
-    "layer fluid.componentList": "infusion-6@6.6.0",
-    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
-    "layer fluid.resolveRoot": "infusion-6@6.6.0",
-    "layer fluid.sfcLayer": "infusion-6@6.6.0",
-    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.viewComponent": "infusion-6@6.6.0",
-    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/]": "sha256-4979abc4f9d26df1610a70bafcb0a1308a08c4ff71464bc2007a342acdbe6f3a",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/].permalink": "sha256-bb02aaee96e74179f007230d60a2de2334ae630725987244d948f138d4085e22",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/page/1/].target": "sha256-663021982d60eecb1dcbb5493dc32b5b92def9dc062806948093b68c1844882e",
-    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
-   }
-  },
-  "https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/": {
-   "effects": 5,
-   "sources": [],
-   "inputs": {
-    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
-    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
-    "layer fluid.component": "infusion-6@6.6.0",
-    "layer fluid.componentList": "infusion-6@6.6.0",
-    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
-    "layer fluid.resolveRoot": "infusion-6@6.6.0",
-    "layer fluid.sfcLayer": "infusion-6@6.6.0",
-    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.viewComponent": "infusion-6@6.6.0",
-    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/]": "sha256-e579319743e137b9698b0e96cd21fd4f0a7115769e0b514409ed5417a90b51c0",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/].permalink": "sha256-fbb5cf1f6f8ab39fe3655e138ab772209ee18c2a1103c67912d6bdc0236a6e99",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/tags/sandbox/page/1/].target": "sha256-a457ed2e85b81c3e9dea14f295af47295532416ecf487b61b4fa05f60964e38b",
-    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
-   }
-  },
-  "https://amb26.github.io/edit-in-infusion-review/page/1/": {
-   "effects": 5,
-   "sources": [],
-   "inputs": {
-    "argument 1 of bindable for record at path outputDocument of document.view": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "build provenance": "sha256-adc2d4f3d4223d204a94ae9088f6096c8559fb40f3ad12d2bd0daa632f73bb75",
-    "layer beautifulWend.site": "sha256-45e20882cb85d8a653d57e960082332021336b2be8413856d6a20f6d8f414b76",
-    "layer fluid.component": "infusion-6@6.6.0",
-    "layer fluid.componentList": "infusion-6@6.6.0",
-    "layer fluid.outputDocumentView": "infusion-6@6.6.0",
-    "layer fluid.resolveRoot": "infusion-6@6.6.0",
-    "layer fluid.sfcLayer": "infusion-6@6.6.0",
-    "layer fluid.sfcTemplateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.templateViewComponent": "infusion-6@6.6.0",
-    "layer fluid.viewComponent": "infusion-6@6.6.0",
-    "layer wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/]": "sha256-244c6748461120ea78ca72cc303851c16c01b1bd0eb6b9767c8cdce16e8ad246",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/].permalink": "sha256-7f6d455e99ff1a5f801aff414ae0d853e723e7a25d3dd7726ca01c9d9b336277",
-    "model site.aliases[https://amb26.github.io/edit-in-infusion-review/page/1/].target": "sha256-41f8b17bd294e9f617635ef9bd4d2f0eb3c4ce7e40996ffee02205a4e1000247",
-    "model site.config.baseURL": "sha256-dc7597e2d22b7fe93704a1a4f741c47706e32ca5f27068c94f0c1ec7b386e211",
-    "template wend.alias": "sha256-20e7041f8a4cc64b16abe3134362f73565f57004b274bdaa8738d95c55cdcdf6"
    }
   }
  }

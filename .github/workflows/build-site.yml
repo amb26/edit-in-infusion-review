@@ -16,6 +16,8 @@ on:
       - "wend.json"
       - "package.json"
       - "package-lock.json"
+      # A change to how the site is built rebuilds it
+      - ".github/workflows/build-site.yml"
   workflow_dispatch:
 
 permissions:

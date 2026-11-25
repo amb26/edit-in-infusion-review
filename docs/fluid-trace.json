@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "commit": "d8321103028742cf92d05c2c5f7bc89501755a67",
+  "commit": "143efae5f0ed1746878a68616d4299ea1b5ff999",
   "infusion": "6.7.0",
   "template": "sha256-343a639bc12dd2f62bab5adb85d1067967712b47649fa24a7e8099e9e5c897ef",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
-    "content/post/hello.md": "sha256-24b94506ae869b0ba790aed38352b472eb9efc55445b2006689223dab0fb89ba",
+    "content/post/hello.md": "sha256-d0e0daa22b59ea9fd7a1184da00a5267bfe04cddaa082c7a734c9796b8ce244d",
     "content/post/second.md": "sha256-d26a7176dabf693c06ef38abaa3a7f60d697041aa43eecdf6878faaaaa44ad5b",
     "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "wend.json": "sha256-17fe1f85f25eae52116299bd9bfe1948ea92fbdfd5f68f3d9d8bcfd8b84fbdf7"
@@ -17,7 +17,7 @@
       "kind": "home",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-aa4d42b6215e411a4bc04410b8ff79f61011151b1b4088224dbf361493d6f9cc",
+      "output": "sha256-c3c89a4995335a781af3e60a1f1dd76e962ef58f02d985454db272c058c691a1",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -29,7 +29,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-94771fef14938b49040c87112ee0856942f27486c79974069efa5f1e6b933f3b",
+      "output": "sha256-ac03822fb109b5d2b244b7f2fa09cc3d2bb55300ddef6cce3491720e41af2681",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -63,7 +63,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-d98dfcc612a73af22529d58857d6df6f9882061c1c6a04d0f9661aeac32e7607",
+      "output": "sha256-938fa8e9f7b37afc9b3925a744bc895fdc1abc8d56f39f2937ad833c93b76348",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -108,7 +108,7 @@
       "kind": "term",
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-8834941d3eedb2bb207a74c6890e9cb435f37221caf5d0ed52f9659bea4cea99",
+      "output": "sha256-e0fa73553b0a368751e77fd6cb88244039e78a97ba79f5d4c2cfe7ffbbfc53c3",
       "inputs": [
         "#template",
         "content/post/hello.md",

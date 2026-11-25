@@ -6,7 +6,7 @@ tags: [sandbox]
 
 This post exists to be edited. Click the “Edit in Infusion” button in your browser’s toolbar, choose **Edit this
 page**, and change anything you like - this paragraph, the heading below, or the list. You can even change these
-words here! Or here.
+words here!
 
 ## Things to try
 

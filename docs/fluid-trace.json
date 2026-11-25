@@ -1,8 +1,8 @@
 {
   "version": 1,
   "commit": null,
-  "infusion": "6.7.0",
-  "template": "sha256-343a639bc12dd2f62bab5adb85d1067967712b47649fa24a7e8099e9e5c897ef",
+  "infusion": "6.7.1",
+  "template": "sha256-64228faeb1eb48376ea2e4a2ffaa69de8f993c504a5fe42b62e3a154c55ff310",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",

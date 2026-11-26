@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "commit": null,
+  "commit": "a1245c984691e1f617462803489044e5108523fa",
   "infusion": "6.7.3",
-  "template": "sha256-a2ab09c182edc0aa4771a5ef0c8a881f6bca3ae14cddbde94bc49707fa00f771",
+  "template": "sha256-ffe6d81078bb0786d3fff455c41e7962ce818d5640889cae6b44c5c44cd3597e",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
     "content/post/hello.md": "sha256-d0e0daa22b59ea9fd7a1184da00a5267bfe04cddaa082c7a734c9796b8ce244d",
-    "content/post/second.md": "sha256-d26a7176dabf693c06ef38abaa3a7f60d697041aa43eecdf6878faaaaa44ad5b",
+    "content/post/second.md": "sha256-0b34fbd1291ee65e3b86209ac7dacc2022215bb6f6152efdd804861b4b77b797",
     "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
     "wend.json": "sha256-17fe1f85f25eae52116299bd9bfe1948ea92fbdfd5f68f3d9d8bcfd8b84fbdf7"
   },
@@ -17,7 +17,7 @@
       "kind": "home",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-c3c89a4995335a781af3e60a1f1dd76e962ef58f02d985454db272c058c691a1",
+      "output": "sha256-bdc36f07adc6b8985103b0b8232b2be0540497acf9dd0d7beb4ead055241ff62",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -29,7 +29,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-ac03822fb109b5d2b244b7f2fa09cc3d2bb55300ddef6cce3491720e41af2681",
+      "output": "sha256-bf8dafdfd679eaf43669e72bdfec90727ffe3041511598e698b54180aa400a2b",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -41,7 +41,7 @@
       "kind": "section",
       "headings": [],
       "outputPath": "/page/index.html",
-      "output": "sha256-bdd03f5609cc21be3f35ce138617ff178400d8236b74990cff4bcec84a2eee6a",
+      "output": "sha256-f4880f3713da9f076a48e10f366a9254c6d06854675048634f49262244d65481",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -63,7 +63,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-938fa8e9f7b37afc9b3925a744bc895fdc1abc8d56f39f2937ad833c93b76348",
+      "output": "sha256-6509ef2ae5a302a253c58b248afd98215c173676515c814b9623a1fa3a1f1085",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -74,7 +74,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/post/second/index.html",
-      "output": "sha256-3332ff462687caa8ff179a0494a93e433828f6d18b6a5677a5bef9a2b3585de2",
+      "output": "sha256-31d76bb7c49e0f35abd084b8f1cd4088c5c07825036342ffd9059fb55a7693a4",
       "inputs": [
         "#template",
         "content/post/second.md"
@@ -85,7 +85,7 @@
       "kind": "page",
       "headings": [],
       "outputPath": "/page/about/index.html",
-      "output": "sha256-94d90136bc68625a468c3c464a9f45de4da098f6516bb09eeed5ed8cd3b82bf1",
+      "output": "sha256-fd6ccf2a7be9b530f78097199edd33ae8b0762517cede6e9b7b01d3f2245d348",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -96,7 +96,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/tags/index.html",
-      "output": "sha256-c7b4bc4e380650d0a0873da465b718062144fe1cd4353fa01ce484813d001159",
+      "output": "sha256-e0afb36b74a9a1e94c361148445fd71e1fc0d34de308a11c6d4dfeee3eb50865",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -108,7 +108,7 @@
       "kind": "term",
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-e0fa73553b0a368751e77fd6cb88244039e78a97ba79f5d4c2cfe7ffbbfc53c3",
+      "output": "sha256-b88d5cb8125958c848feaadc749bca0c8568d3b8ed0256eda6da82c6638a0fea",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -120,7 +120,7 @@
       "kind": "taxonomy",
       "headings": [],
       "outputPath": "/categories/index.html",
-      "output": "sha256-56190b217dbc15f187fb6c4be2b1272888a47c525cbdbe70c0445d8c8e1855ea",
+      "output": "sha256-e7585bba3a7065aba52a54826581e90d4b41322cca6d7de92f5fd0ca85262708",
       "inputs": [
         "#template"
       ]
@@ -130,7 +130,7 @@
       "kind": "404",
       "headings": [],
       "outputPath": "/404.html",
-      "output": "sha256-d0d7c1584ab36eb95dcfe7fd8be93c9eb64722dcbf2c92d9e8f71c17cc8f3326",
+      "output": "sha256-6f0b2283fe462b99d66b1532b05fa0aeeaf4cfb3d3e69ca8deec609b1863e409",
       "inputs": [
         "#template"
       ]
@@ -140,6 +140,7 @@
     "/img/pond.jpg"
   ],
   "staticFiles": {
-    "static/img/pond.jpg": "sha256-4860c3a27fef560c491af335e53a588f03631547b8e0f4abf2195d31520083c0"
+    "static/img/pond.jpg": "sha256-4860c3a27fef560c491af335e53a588f03631547b8e0f4abf2195d31520083c0",
+    "static/sfc/fluid-demos-ai-colourBox.vue": "sha256-92c9f120db8f53d7bbc5e0e51b2b41c17510babd4215a07985dbab8a32a9d23f"
   }
 }

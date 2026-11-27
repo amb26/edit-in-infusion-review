@@ -124,6 +124,25 @@ fluid.sourceView.headingOptions = function (site, pathPart) {
     }));
 };
 
+// The nodes of the source's syntax tree within which nothing is completed - code, whether markdown's or an SFC's scripts
+// and styles, which only quotes what a link, a widget's element or a template's reference would be elsewhere
+fluid.sourceView.codeNodes = new Set(["FencedCode", "CodeBlock", "InlineCode", "CodeText", "ScriptText", "StyleText", "Script", "Style", "StyleSheet"]);
+
+/**
+ * Determine whether the position completed stands within code, as the source's syntax tree parses it
+ * @param {Object} context - CodeMirror's completion context
+ * @return {Boolean} `true` if it does
+ */
+fluid.sourceView.inCode = function (context) {
+    let node = fluid.sourceView.CM.syntaxTree(context.state).resolveInner(context.pos, -1);
+    let togo = false;
+    while (node && !togo) {
+        togo = fluid.sourceView.codeNodes.has(node.name);
+        node = node.parent;
+    }
+    return togo;
+};
+
 /**
  * Make the source of completions for the destinations of markdown links and images - `[text](` offers the site's
  * pages, by title, and `![alt](` its images; after a "#", e.g. `[text](#` or `[text](/post/x/#`, the headings of
@@ -136,7 +155,7 @@ fluid.sourceView.headingOptions = function (site, pathPart) {
  */
 fluid.sourceView.linkCompletions = function (getSite) {
     return function (context) {
-        const match = context.matchBefore(/(!?)\[[^\]\n]*\]\(([^)\s]*)$/);
+        const match = fluid.sourceView.inCode(context) ? null : context.matchBefore(/(!?)\[[^\]\n]*\]\(([^)\s]*)$/);
         const site = getSite();
         let togo = null;
         if (match && site) {
@@ -169,15 +188,94 @@ fluid.sourceView.linkCompletions = function (getSite) {
 };
 
 /**
+ * Make the source of completions of the layers of widgets, as one is typed into the `fluid-layers` attribute of a
+ * widget's element - those of the site's widgets which may be inserted, whether published or held in the browser
+ * @param {Function} getSite - Returns what is known of the site, as for `linkCompletions` - its `widgetLayers`, as
+ * `{layer, note}`, are offered
+ * @return {Function} The completion source, for CodeMirror's autocompletion
+ */
+fluid.sourceView.layerCompletions = function (getSite) {
+    return function (context) {
+        // Within the attribute's quotes, after any layers already named - the name being typed is completed
+        const match = fluid.sourceView.inCode(context) ? null : context.matchBefore(/\sfluid-layers\s*=\s*"[^"\n]*$/);
+        const site = match ? getSite() : null;
+        let togo = null;
+        if (match && site && site.widgetLayers) {
+            const typed = match.text.substring(match.text.lastIndexOf("\"") + 1).split(/\s+/).pop();
+            togo = {
+                from: context.pos - typed.length,
+                options: site.widgetLayers.map(({layer, note}) => ({label: layer, detail: note || "widget", type: "class"})),
+                validFor: /^[\w.$-]*$/
+            };
+        }
+        return togo;
+    };
+};
+
+/**
+ * Make the completion source of the references of a template, in two levels as Infusion's templates write them - a
+ * context, `@{{context}.member}`, completed from the contexts in scope of the component rendering the template as
+ * `@{{` is typed, and once its brace is closed and a `.` typed, from the members of that context; or a member of the
+ * component itself, `@{member}`, e.g. `@{au` completing to `@{author.name}`
+ * @param {Function} getScope - Returns what the template may refer to, as by fluid.staticEditing.templateScope -
+ * `{contexts(), members(context)}` - or null where nothing is known of it
+ * @return {Function} The completion source, for CodeMirror's autocompletion
+ */
+fluid.sourceView.templateCompletions = function (getScope) {
+    return function (context) {
+        const match = fluid.sourceView.inCode(context) ? null : context.matchBefore(/@\{(?:\{[\w.$-]*\}?\.?)?[\w.$-]*$/);
+        const scope = match ? getScope() : null;
+        let togo = null;
+        if (match && scope) {
+            const typed = match.text.substring(2);
+            const contextual = /^\{([\w.$-]*)(\})?(\.)?([\w.$-]*)$/.exec(typed);
+            // The closing brace of a reference, should it not follow already
+            const closing = context.state.sliceDoc(context.pos, context.pos + 1) === "}" ? "" : "}";
+            if (contextual && !contextual[2]) {
+                // A context being named, after "@{{"
+                togo = {
+                    from: context.pos - contextual[1].length,
+                    // Chosen, the context's members are offered at once
+                    options: scope.contexts().map(name => ({label: name, detail: "context", type: "namespace", apply: (view, completion, from, to) => {
+                        const insert = name + (view.state.sliceDoc(to, to + 2) === "}." ? "" : "}.");
+                        view.dispatch({changes: {from, to, insert}, selection: {anchor: from + insert.length}});
+                        // Once the completion accepted has closed
+                        setTimeout(() => fluid.sourceView.CM.startCompletion(view));
+                    }})),
+                    validFor: /^[\w.$-]*$/
+                };
+            } else if (contextual && contextual[3] !== undefined) {
+                // A member of the context named, after "@{{context}."
+                togo = {
+                    from: context.pos - contextual[4].length,
+                    options: scope.members(contextual[1]).map(({name, detail}) => ({label: name, apply: name + closing, detail, type: "property"})),
+                    validFor: /^[\w.$-]*$/
+                };
+            } else if (!contextual) {
+                // A member of the component itself, after "@{"
+                togo = {
+                    from: context.pos - typed.length,
+                    options: scope.members(null).map(({name, detail}) => ({label: name, apply: name + closing, detail, type: "property"})),
+                    validFor: /^[\w.$-]*$/
+                };
+            }
+        }
+        return togo;
+    };
+};
+
+/**
  * Make the source view in its rendered container - a CodeMirror 6 editor, and a hidden <textarea> mirroring its text.
  * What happens in it is announced as DOM events on the container, which bubble: "fluidsourcechange" {text} on each
- * edit; "fluidsourcecursor" {line} as the cursor moves to another line; "fluidsourcepaste" {text} and
+ * edit; "fluidsourcecursor" {line, pos} as the cursor moves; "fluidsourcepaste" {text} and
  * "fluidsourcedrop" {files}, cancelable, a listener preventing the default to take the paste or drop, e.g. a widget
- * held on the clipboard as PTF; and "fluidsourcesite" {site}, into whose detail a listener writes what is known of the
- * site, for completing links - see `linkCompletions`
+ * held on the clipboard as PTF; and "fluidsourcesite" {site, templateScope}, into whose detail a listener writes what is
+ * known of the site, for completing links - see `linkCompletions` - and of the component rendering the source, for
+ * completing its template's references - see `templateCompletions`
  * @param {Element} parent - The view's rendered container
  * @return {Object} The view - `setText(text)`, `getText()`, `setLanguage(path)`, `showBlock({startLine, endLine})`,
- * `insertBlock(text)`, `focus()`, `view`, the CodeMirror view, and `mirror`, the hidden <textarea>
+ * `showPosition(pos)`, `selection()`, `insertBlock(text)`, `focus()`, `view`, the CodeMirror view, and `mirror`, the
+ * hidden <textarea>
  */
 fluid.sourceView.bind = function (parent) {
     const announce = (type, detail, cancelable) => {
@@ -186,8 +284,9 @@ fluid.sourceView.bind = function (parent) {
         return event;
     };
     const onChange = text => announce("fluidsourcechange", {text});
-    const onCursorLine = line => announce("fluidsourcecursor", {line});
-    const getSite = () => announce("fluidsourcesite", {site: null}).detail.site;
+    const onCursor = (line, pos) => announce("fluidsourcecursor", {line, pos});
+    const getSite = () => announce("fluidsourcesite", {site: null, templateScope: null}).detail.site;
+    const getScope = () => announce("fluidsourcesite", {site: null, templateScope: null}).detail.templateScope;
     const onPaste = text => announce("fluidsourcepaste", {text}, true).defaultPrevented;
     const onDrop = files => announce("fluidsourcedrop", {files}, true).defaultPrevented;
     const language = new fluid.sourceView.CM.Compartment();
@@ -197,6 +296,7 @@ fluid.sourceView.bind = function (parent) {
     mirror.setAttribute("aria-hidden", "true");
     parent.appendChild(mirror);
     let applying = false;
+    let lastCursorPos = -1;
     let lastCursorLine = -1;
     const view = new fluid.sourceView.CM.EditorView({
         parent,
@@ -213,7 +313,8 @@ fluid.sourceView.bind = function (parent) {
                 fluid.sourceView.CM.highlightSelectionMatches(),
                 fluid.sourceView.CM.syntaxHighlighting(fluid.sourceView.CM.defaultHighlightStyle, {fallback: true}),
                 fluid.sourceView.CM.EditorView.lineWrapping,
-                fluid.sourceView.CM.autocompletion({override: [fluid.sourceView.linkCompletions(getSite)], icons: false}),
+                fluid.sourceView.CM.autocompletion({override: [fluid.sourceView.linkCompletions(getSite), fluid.sourceView.layerCompletions(getSite),
+                    fluid.sourceView.templateCompletions(getScope)], icons: false}),
                 fluid.sourceView.CM.keymap.of([...fluid.sourceView.CM.completionKeymap, ...fluid.sourceView.CM.defaultKeymap, ...fluid.sourceView.CM.historyKeymap, ...fluid.sourceView.CM.searchKeymap, fluid.sourceView.CM.indentWithTab]),
                 language.of(fluid.sourceView.CM.markdown()),
                 fluid.sourceView.blockLinesField,
@@ -270,10 +371,12 @@ fluid.sourceView.bind = function (parent) {
                         }
                     }
                     if (update.selectionSet && !applying) {
-                        const line = update.state.doc.lineAt(update.state.selection.main.head).number - 1;
-                        if (line !== lastCursorLine) {
+                        const head = update.state.selection.main.head;
+                        const line = update.state.doc.lineAt(head).number - 1;
+                        if (line !== lastCursorLine || head !== lastCursorPos) {
                             lastCursorLine = line;
-                            onCursorLine(line);
+                            lastCursorPos = head;
+                            onCursor(line, head);
                         }
                     }
                 })
@@ -310,6 +413,24 @@ fluid.sourceView.bind = function (parent) {
         view.dispatch({effects});
     };
     that.focus = () => view.focus();
+    // Move the cursor to a position, scrolled into view, as the user's selection elsewhere moves it - announcing no move
+    // of the cursor, which is where that selection already stands, nor taking the focus from it
+    that.showPosition = function (pos) {
+        applying = true;
+        try {
+            const at = Math.min(pos, view.state.doc.length);
+            view.dispatch({selection: {anchor: at}, effects: fluid.sourceView.CM.EditorView.scrollIntoView(at, {y: "nearest"})});
+            lastCursorPos = at;
+            lastCursorLine = view.state.doc.lineAt(at).number - 1;
+        } finally {
+            applying = false;
+        }
+    };
+    // The text selected, and where - empty at the cursor, should nothing be selected
+    that.selection = function () {
+        const {from, to} = view.state.selection.main;
+        return {from, to, text: view.state.doc.sliceString(from, to)};
+    };
     // Insert text at the cursor, as its own block - set off by blank lines, splitting the line the cursor is within -
     // as the user's edit. A widget inserted within another widget's element takes its place, rather than splitting it
     that.insertBlock = function (text) {
@@ -431,11 +552,11 @@ fluid.sourceView.unbind = function (that) {
 </template>
 
 <style>
-/* The source view - CodeMirror 6 - filling the unfolded source of the editing panel */
-/* Its height is given, since a <details> lays out its content apart from the panel's flexbox */
+/* The source view - CodeMirror 6 - filling the unfolded source of the editing panel, which shares the panel's height
+   with its other controls, the editor scrolling within what it is left */
 .fluid-edit-source-view {
-    height: calc(100vh - 280px);
-    min-height: 200px;
+    flex: 1 1 0;
+    min-height: 36px;
     display: flex;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -443,14 +564,17 @@ fluid.sourceView.unbind = function (that) {
     overflow: hidden;
 }
 
+/* Shrunk with the view, scrolling within it, rather than holding the height of its content */
 .fluid-edit-source-view .cm-editor {
     flex: 1;
+    min-height: 0;
     height: 100%;
     font-size: 13px;
 }
 
+/* The font of Infusion's code examples - see fluid-liveExample.vue */
 .fluid-edit-source-view .cm-scroller {
-    font-family: ui-monospace, monospace;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 .fluid-edit-source-view .cm-editor.cm-focused {

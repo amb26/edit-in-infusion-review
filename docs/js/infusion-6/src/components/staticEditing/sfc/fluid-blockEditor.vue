@@ -128,6 +128,8 @@ fluid.blockEditor.apply = function (that, container, blocks, on) {
             cursor += count;
             const element = own.length === 1 && own[0].nodeType === 1 ? own[0] : null;
             if (element) {
+                // What the page shows of a block is the rendering of its source, and nothing else - see sweepUnrendered
+                fluid.blockEditor.sweepUnrendered(element, block);
                 const editable = block.startLine !== null && fluid.markdownSerializer.roundTrips(element, render);
                 element.setAttribute("data-fluid-block", editable ? "editable" : block.kind === "island" ? "island" : "source");
                 element.setAttribute("data-fluid-block-index", String(index));
@@ -153,6 +155,42 @@ fluid.blockEditor.apply = function (that, container, blocks, on) {
     } else {
         fluid.blockEditor.selectIsland(record, null);
         fluid.blockEditor.toolbar.hide();
+    }
+};
+
+/**
+ * Hold a block's element to the invariant that what it shows is the rendering of its source alone. Infusion's
+ * rendering leaves in place any node it did not make, as it must for those which others add, e.g. a widget loader -
+ * but within a block, a node the editor or the browser made, e.g. the element wrapping text made a link, or one typed
+ * into before the source was committed, would otherwise survive the rendering of the edit beside the rendering's own
+ * nodes for it, as a ghost, and be read back into the source, duplicating it on every edit. Once the source is
+ * rendered, each such node is removed. Should the element then differ from the rendering of its block nonetheless, it
+ * is reported, since the source would no longer be what is shown
+ * @param {Element} element - The block's element, as rendered
+ * @param {Object} block - Its block, with the `html` its source renders to
+ */
+fluid.blockEditor.sweepUnrendered = function (element, block) {
+    if (element.flOwned) {
+        const strays = [];
+        const walk = node => [...node.childNodes].forEach(child => {
+            // A widget's element renders itself, as its own component's
+            if (!child.flOwned) {
+                strays.push(child);
+            } else if (!(child.nodeType === 1 && child.hasAttribute("fluid-layers"))) {
+                walk(child);
+            }
+        });
+        walk(element);
+        strays.forEach(node => node.remove());
+        if (strays.length > 0 && block.kind !== "island") {
+            const holder = document.createElement("template");
+            holder.innerHTML = block.html;
+            const rendered = holder.content.firstElementChild;
+            // Compared as trees, canonically - attributes in any order, and the editor's own marks disregarded
+            if (rendered && fluid.markdownSerializer.canonicalChildren(rendered) !== fluid.markdownSerializer.canonicalChildren(element)) {
+                console.warn("Edit in Infusion: a block differs from the rendering of its source", element, block.html);
+            }
+        }
     }
 };
 
@@ -300,6 +338,17 @@ fluid.blockEditor.listen = function (container) {
             element.blur();
         } else if (event.key === "Escape") {
             fluid.blockEditor.selectIsland(record, null);
+        }
+    });
+    // A widget selected is deleted by Delete or Backspace, as text is - unless a field of the widget's own is being
+    // typed into. Bound on the document, since a widget pressed on needn't take the focus
+    document.addEventListener("keydown", event => {
+        const island = record.selectedIsland;
+        if (island && island.isConnected && (event.key === "Delete" || event.key === "Backspace") &&
+            !event.ctrlKey && !event.metaKey && !event.altKey && !fluid.blockEditor.isTypingInto(document.activeElement)) {
+            event.preventDefault();
+            fluid.blockEditor.selectIsland(record, null);
+            fluid.blockEditor.removeIsland(record, island);
         }
     });
     return record;
@@ -521,6 +570,9 @@ fluid.blockEditor.splice = function (record, first, last, markdown, focus) {
     const text = lines.join("\n");
     clearTimeout(record.liveTimer);
     record.source = text;
+    // The blocks are those of the source as now spliced, at once - a further splice before it is rendered, e.g. the
+    // commit of a block left after its live commit, must replace the lines its block now holds, not those it held
+    record.blocks = fluid.blockEditor.segment(text, record.renderer);
     record.before = null;
     record.focus = focus || null;
     document.dispatchEvent(new CustomEvent("fluid-block-edit-source", {detail: JSON.stringify({text})}));
@@ -657,6 +709,15 @@ fluid.blockEditor.saveIsland = function (record, island) {
             fluid.blockEditor.splice(record, index, index, markup);
         }
     }
+};
+
+/**
+ * Determine whether an element takes typed text, so that Delete and Backspace are its own rather than deleting a widget
+ * @param {Element|null} element - The element, e.g. the document's active element
+ * @return {Boolean} `true` if it takes typed text
+ */
+fluid.blockEditor.isTypingInto = function (element) {
+    return !!element && (["INPUT", "TEXTAREA", "SELECT"].includes(element.tagName) || element.isContentEditable === true);
 };
 
 // The attribute marking the widget selected, e.g. to be copied - never written into the source, since a widget is
@@ -986,25 +1047,68 @@ fluid.blockEditor.layerFiles = function (layerParts) {
 };
 
 /**
+ * Remove from a widget's potentia where a host such as a tldraw arena placed it - the position and size of its shape,
+ * written at its view (see fluid.tldraw.writeShapeConfig) - which mean nothing in a page, together with any records
+ * thereby left empty
+ * @param {Object} potentia - The widget's potentia, as by `fluid.ptf.islandFromParts`, which is modified
+ * @return {Object} The potentia
+ */
+fluid.blockEditor.stripPlacement = function (potentia) {
+    const view = potentia.view && potentia.view.$component;
+    if (fluid.isPlainObject(view, true)) {
+        delete view.shape;
+        delete view.shapeId;
+        if (Object.keys(view).length === 0) {
+            delete potentia.view.$component;
+        }
+        if (Object.keys(potentia.view).length === 0) {
+            delete potentia.view;
+        }
+    }
+    return potentia;
+};
+
+/**
+ * List the widgets' elements of a source, as markdown parses it - each island block's element, with the lines it is
+ * written on, so that a widget may be found in the source by its id rather than by searching its text, which may
+ * appear elsewhere, e.g. in a code block or in prose quoting it
+ * @param {String} source - The source
+ * @param {String} rendererName - The global name of the markdown pipeline rendering it, e.g. "wendMarkdown"
+ * @return {Object[]} `{id, layers, startLine, endLine}` for each, the lines counting from 0, the last exclusive
+ */
+fluid.blockEditor.islandsOf = function (source, rendererName) {
+    return fluid.blockEditor.segment(source, rendererName).filter(block => block.kind === "island" && block.startLine !== null).map(block => {
+        const holder = document.createElement("template");
+        holder.innerHTML = block.html;
+        const island = holder.content.querySelector("[fluid-layers]");
+        return island ? {id: island.getAttribute("fluid-id"), layers: island.getAttribute("fluid-layers").split(/\s+/).filter(layer => layer),
+            startLine: block.startLine, endLine: block.endLine} : null;
+    }).filter(island => island);
+};
+
+/**
  * Make a pasted widget ready to insert - its layers registered, unless the page defines them already, in which case
  * the extension asks whether to replace them, and its element written
  * @param {PTFPart[]} documentParts - The parts of its PTF document, perhaps wrapping it - see `fluid.ptf.componentParts`
  * @param {String} source - The source into which it is to be inserted, so that its `fluid-id` is unused there
- * @return {Object} `{markup, files}` - its element, and the files of its layers, as by `layerFiles`
+ * @param {String} [id] - The `fluid-id` to give it, e.g. that of a widget it replaces - by default one unused in the source
+ * @return {Object} `{markup, files, id}` - its element, the files of its layers, as by `layerFiles`, and its id
  */
-fluid.blockEditor.widgetFromParts = function (documentParts, source) {
+fluid.blockEditor.widgetFromParts = function (documentParts, source, id) {
     // A widget copied out of a tldraw arena arrives wrapped as the one component of its document
     const parts = fluid.ptf.componentParts(documentParts);
     const island = fluid.ptf.islandFromParts(parts);
+    fluid.blockEditor.stripPlacement(island.potentia);
     const files = fluid.blockEditor.layerFiles(island.layerParts);
     fluid.ptf.registerLayerParts(parts);
     if (!fluid.blockEditor.widgets.some(widget => widget.layer === island.layers[0])) {
         fluid.blockEditor.widgets.push({layer: island.layers[0]});
     }
+    const islandId = id || fluid.blockEditor.allocateId(source, island.layers[0]);
     return {
-        markup: fluid.ptf.islandMarkup({layers: island.layers, potentia: island.potentia,
-            id: fluid.blockEditor.allocateId(source, island.layers[0])}),
-        files
+        markup: fluid.ptf.islandMarkup({layers: island.layers, potentia: island.potentia, id: islandId}),
+        files,
+        id: islandId
     };
 };
 

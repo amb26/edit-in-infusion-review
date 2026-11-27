@@ -1,35 +1,44 @@
 {
   "version": 1,
-  "commit": "a1245c984691e1f617462803489044e5108523fa",
-  "infusion": "6.7.3",
-  "template": "sha256-ffe6d81078bb0786d3fff455c41e7962ce818d5640889cae6b44c5c44cd3597e",
+  "commit": null,
+  "infusion": "6.7.7",
+  "template": "sha256-48c7e27f7adf3f279ba045d4c0e61ea2a47c2bfe1225c2186e58883b0875d0f2",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
     "content/post/hello.md": "sha256-d0e0daa22b59ea9fd7a1184da00a5267bfe04cddaa082c7a734c9796b8ce244d",
     "content/post/second.md": "sha256-0b34fbd1291ee65e3b86209ac7dacc2022215bb6f6152efdd804861b4b77b797",
-    "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-0e7407de182a644fc7a80bd262df843fdf27f470189ab0929ba72ca717e35418",
+    "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-b2bb2e42470e338595369dcc1cd5f33306461ba251076a598b17df123c2ccd7c",
     "wend.json": "sha256-17fe1f85f25eae52116299bd9bfe1948ea92fbdfd5f68f3d9d8bcfd8b84fbdf7"
   },
   "pages": {
     "/": {
       "title": "Edit in Infusion - review site",
+      "layers": [
+        "fluid.demos.ai.colourBox"
+      ],
       "kind": "home",
+      "source": "content/_index.md",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-bdc36f07adc6b8985103b0b8232b2be0540497acf9dd0d7beb4ead055241ff62",
+      "output": "sha256-7b312150a02107f2d72ad9bdf8e229428047b37a79d2f8078cb43534c0491745",
       "inputs": [
         "#template",
+        "content/_index.md",
         "content/post/hello.md",
         "content/post/second.md"
       ]
     },
     "/post/": {
       "title": "post",
+      "layers": [
+        "fluid.demos.ai.colourBox"
+      ],
       "kind": "section",
+      "source": null,
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-bf8dafdfd679eaf43669e72bdfec90727ffe3041511598e698b54180aa400a2b",
+      "output": "sha256-efae78d04a5eacb13b67e23b65eff316084fb991314e3dd774a168fc70664367",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -38,10 +47,12 @@
     },
     "/page/": {
       "title": "page",
+      "layers": [],
       "kind": "section",
+      "source": null,
       "headings": [],
       "outputPath": "/page/index.html",
-      "output": "sha256-f4880f3713da9f076a48e10f366a9254c6d06854675048634f49262244d65481",
+      "output": "sha256-b51cfd4f8d51d7032aa8456f644ea43ad8fad4c668257b778a25d6eca05ba548",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -49,7 +60,9 @@
     },
     "/post/hello/": {
       "title": "Hello from the review site",
+      "layers": [],
       "kind": "page",
+      "source": "content/post/hello.md",
       "headings": [
         {
           "id": "things-to-try",
@@ -63,7 +76,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-6509ef2ae5a302a253c58b248afd98215c173676515c814b9623a1fa3a1f1085",
+      "output": "sha256-f15784e689031f0ed65e1ca18ecd42be5263d4e44fa67b08fe197235f31b1a1c",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -71,10 +84,14 @@
     },
     "/post/second/": {
       "title": "A second post",
+      "layers": [
+        "fluid.demos.ai.colourBox"
+      ],
       "kind": "page",
+      "source": "content/post/second.md",
       "headings": [],
       "outputPath": "/post/second/index.html",
-      "output": "sha256-31d76bb7c49e0f35abd084b8f1cd4088c5c07825036342ffd9059fb55a7693a4",
+      "output": "sha256-abf699c9c150247834bdb44006b9089d2b2d49e65ac5f647831387d9de0d4aab",
       "inputs": [
         "#template",
         "content/post/second.md"
@@ -82,10 +99,12 @@
     },
     "/page/about/": {
       "title": "About this site",
+      "layers": [],
       "kind": "page",
+      "source": "content/page/about.md",
       "headings": [],
       "outputPath": "/page/about/index.html",
-      "output": "sha256-fd6ccf2a7be9b530f78097199edd33ae8b0762517cede6e9b7b01d3f2245d348",
+      "output": "sha256-b68364e18c93b773a244041992b708b24a575f9de9f3ae71668ae9f1f19109b9",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -93,10 +112,12 @@
     },
     "/tags/": {
       "title": "tags",
+      "layers": [],
       "kind": "taxonomy",
+      "source": null,
       "headings": [],
       "outputPath": "/tags/index.html",
-      "output": "sha256-e0afb36b74a9a1e94c361148445fd71e1fc0d34de308a11c6d4dfeee3eb50865",
+      "output": "sha256-98a5afd5b2d4b53a181ce91f4c1b587125cbcf9e71583158321c2cf4928c2973",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -105,10 +126,14 @@
     },
     "/tags/sandbox/": {
       "title": "sandbox",
+      "layers": [
+        "fluid.demos.ai.colourBox"
+      ],
       "kind": "term",
+      "source": null,
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-b88d5cb8125958c848feaadc749bca0c8568d3b8ed0256eda6da82c6638a0fea",
+      "output": "sha256-5f742e340a219aa11764b99c7549045944a775386bde1aba6f8fd3be8380b36b",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -117,20 +142,24 @@
     },
     "/categories/": {
       "title": "categories",
+      "layers": [],
       "kind": "taxonomy",
+      "source": null,
       "headings": [],
       "outputPath": "/categories/index.html",
-      "output": "sha256-e7585bba3a7065aba52a54826581e90d4b41322cca6d7de92f5fd0ca85262708",
+      "output": "sha256-d8ebfc5f7785be7e392f3a41609cefb03275925328d10dfe53e552fbfb25bc11",
       "inputs": [
         "#template"
       ]
     },
     "/404.html": {
       "title": "404 Page not found",
+      "layers": [],
       "kind": "404",
+      "source": null,
       "headings": [],
       "outputPath": "/404.html",
-      "output": "sha256-6f0b2283fe462b99d66b1532b05fa0aeeaf4cfb3d3e69ca8deec609b1863e409",
+      "output": "sha256-482feb4a328b525959fb36b8524ef4c630a2587aca9a195461567544fabf9c45",
       "inputs": [
         "#template"
       ]
@@ -142,5 +171,13 @@
   "staticFiles": {
     "static/img/pond.jpg": "sha256-4860c3a27fef560c491af335e53a588f03631547b8e0f4abf2195d31520083c0",
     "static/sfc/fluid-demos-ai-colourBox.vue": "sha256-92c9f120db8f53d7bbc5e0e51b2b41c17510babd4215a07985dbab8a32a9d23f"
-  }
+  },
+  "widgets": {
+    "fluid.demos.ai.colourBox": {
+      "path": "static/sfc/fluid-demos-ai-colourBox.vue",
+      "inherited": false,
+      "uses": []
+    }
+  },
+  "bases": []
 }

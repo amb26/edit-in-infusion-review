@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "commit": "b096db48a41eb784518a6f2e0c83522dd1384e0a",
-  "infusion": "6.7.7",
-  "template": "sha256-48c7e27f7adf3f279ba045d4c0e61ea2a47c2bfe1225c2186e58883b0875d0f2",
+  "commit": null,
+  "infusion": "6.7.10",
+  "template": "sha256-08d46da4c5476d4dcc6f2fdd8f898c4d99b5172ee9f1273caec451af38c0c4fb",
   "sources": {
     "content/_index.md": "sha256-9d4b5108254c3eea62d99bfaf83e272569950371ce71f5eca8aa9bce18726085",
     "content/page/about.md": "sha256-cc85e2ad063efd6d6ad270936122e610628f2a2561e7a08defc927288e241821",
     "content/post/hello.md": "sha256-d0e0daa22b59ea9fd7a1184da00a5267bfe04cddaa082c7a734c9796b8ce244d",
     "content/post/second.md": "sha256-0b34fbd1291ee65e3b86209ac7dacc2022215bb6f6152efdd804861b4b77b797",
-    "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-b2bb2e42470e338595369dcc1cd5f33306461ba251076a598b17df123c2ccd7c",
+    "wend/override/beautifulWend/sfc/beautifulWend-footer.vue": "sha256-b6e6b8f45ec913f2a9bf5769abe76ec093396dd69d1691fb4d664bc920bd3161",
     "wend.json": "sha256-17fe1f85f25eae52116299bd9bfe1948ea92fbdfd5f68f3d9d8bcfd8b84fbdf7"
   },
   "pages": {
@@ -21,7 +21,7 @@
       "source": "content/_index.md",
       "headings": [],
       "outputPath": "/index.html",
-      "output": "sha256-7b312150a02107f2d72ad9bdf8e229428047b37a79d2f8078cb43534c0491745",
+      "output": "sha256-fafbb75afb805dbed6da06a6230499d27f772cb6f02c90bc8b51f57ed109708d",
       "inputs": [
         "#template",
         "content/_index.md",
@@ -38,7 +38,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/post/index.html",
-      "output": "sha256-efae78d04a5eacb13b67e23b65eff316084fb991314e3dd774a168fc70664367",
+      "output": "sha256-055397c38696f5384fcab232a0e312205fe65e38b4efa719e61f458d77b47000",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -52,7 +52,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/page/index.html",
-      "output": "sha256-b51cfd4f8d51d7032aa8456f644ea43ad8fad4c668257b778a25d6eca05ba548",
+      "output": "sha256-5fd7c9e1d75e39db644840f2edeb2146c2f8823c342c8946d6497fca2e889034",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -76,7 +76,7 @@
         }
       ],
       "outputPath": "/post/hello/index.html",
-      "output": "sha256-f15784e689031f0ed65e1ca18ecd42be5263d4e44fa67b08fe197235f31b1a1c",
+      "output": "sha256-70912cdf95b661746cb76c1372d102c4b7a5a3214415773a895909a5c7fda12c",
       "inputs": [
         "#template",
         "content/post/hello.md"
@@ -91,7 +91,7 @@
       "source": "content/post/second.md",
       "headings": [],
       "outputPath": "/post/second/index.html",
-      "output": "sha256-abf699c9c150247834bdb44006b9089d2b2d49e65ac5f647831387d9de0d4aab",
+      "output": "sha256-6890e2cefbed037cf88f15cd38eb4b755730c5a36e7a1686b33c6234b74cc2e8",
       "inputs": [
         "#template",
         "content/post/second.md"
@@ -104,7 +104,7 @@
       "source": "content/page/about.md",
       "headings": [],
       "outputPath": "/page/about/index.html",
-      "output": "sha256-b68364e18c93b773a244041992b708b24a575f9de9f3ae71668ae9f1f19109b9",
+      "output": "sha256-ba84e8a07d3870dba9ab66c0c1b828f32ebf78770b57ef5e9a9152425375ec38",
       "inputs": [
         "#template",
         "content/page/about.md"
@@ -117,7 +117,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/tags/index.html",
-      "output": "sha256-98a5afd5b2d4b53a181ce91f4c1b587125cbcf9e71583158321c2cf4928c2973",
+      "output": "sha256-82362790340546128c47c28d63ffa3f340e6bbb6f497dab4b5d519642d273db6",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -133,7 +133,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/tags/sandbox/index.html",
-      "output": "sha256-5f742e340a219aa11764b99c7549045944a775386bde1aba6f8fd3be8380b36b",
+      "output": "sha256-4769341728bd7f1d5c0d103eea7d0034b724b31e23939063722e33a89ba9e777",
       "inputs": [
         "#template",
         "content/post/hello.md",
@@ -147,7 +147,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/categories/index.html",
-      "output": "sha256-d8ebfc5f7785be7e392f3a41609cefb03275925328d10dfe53e552fbfb25bc11",
+      "output": "sha256-90158738386c4f8dfc35b0418763860da0a4a1ea49908289241077319a5230ee",
       "inputs": [
         "#template"
       ]
@@ -159,7 +159,7 @@
       "source": null,
       "headings": [],
       "outputPath": "/404.html",
-      "output": "sha256-482feb4a328b525959fb36b8524ef4c630a2587aca9a195461567544fabf9c45",
+      "output": "sha256-9b914274c0a6ad1da4af14ac26d75b51ab38db2eaa001c1c53c1456fe790b83c",
       "inputs": [
         "#template"
       ]

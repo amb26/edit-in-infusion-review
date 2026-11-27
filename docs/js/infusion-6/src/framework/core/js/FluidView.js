@@ -3911,12 +3911,41 @@ const fluidViewScope = function (fluid) {
     };
 
     /**
+     * Align the nodes an element holds with the vnodes which are to be its children, in order - each vnode takes the
+     * first node after that of the vnode before it which matches it, so that nodes inserted amongst those rendered from
+     * the vnodes are passed over. Used on the first rendering of an element which already has children.
+     * @param {Node[]} children - The nodes the element holds
+     * @param {VNode[]} vchildren - The vnodes which are to be its children
+     * @return {Array<Node|undefined>} For each vnode, the node aligned with it, or `undefined` if none is
+     */
+    fluid.alignChildNodes = function (children, vchildren) {
+        let cursor = 0;
+        return vchildren.map(vchild => {
+            let found = cursor;
+            while (found < children.length && !fluid.matchNodeToVNode(children[found], vchild)) {
+                ++found;
+            }
+            let togo;
+            if (found < children.length) {
+                togo = children[found];
+                cursor = found + 1;
+            } else {
+                togo = undefined;
+            }
+            return togo;
+        });
+    };
+
+    /**
      * Match up the vnodes which are to be the children of an element with the nodes which it currently holds and which
      * may be reused for them, removing any others which this rendering owns. A rendering owns the nodes it created,
      * and, on the first rendering of an element which already has children, e.g. markup written by an earlier static
      * rendering, those which it claims from them. Any node which it does not own, e.g. one added by a widget loader or
-     * browser extension, is left in place and alone. On the first rendering the children are claimed by position,
-     * since the markup is expected to have been rendered from the same template. Thereafter, owned nodes are matched to
+     * browser extension, is left in place and alone. On the first rendering the markup is expected to have been
+     * rendered from the same template, and its children are aligned with the vnodes in order - should every vnode find
+     * its node, any other children were inserted by others, e.g. a stylesheet prepended to <head> by a widget's script,
+     * and are left alone, as are nodes added later. Should any vnode find none, the markup differs from the template,
+     * and its children are instead claimed by position, any left over removed. Thereafter, owned nodes are matched to
      * vnodes by key where they have one, so that a node is reused by the same list member or block however the list
      * is reordered or grows, and other nodes by position amongst the unkeyed ones.
      * @param {Element} element - The element whose children are being reconciled
@@ -3951,8 +3980,17 @@ const fluidViewScope = function (fluid) {
                 return candidate && fluid.matchNodeToVNode(candidate, vchild) ? candidate : undefined;
             });
         } else {
-            owned = children;
-            assigned = vchildren.map((vchild, i) => children[i] && fluid.matchNodeToVNode(children[i], vchild) ? children[i] : undefined);
+            // Claiming by position would put every node after one inserted amongst the markup to the wrong vnode - each
+            // then rewritten, e.g. a <link> refetching its stylesheet under another href
+            const aligned = fluid.alignChildNodes(children, vchildren);
+            // An element rendering nothing has no markup of its own by which to tell others' - all is taken as stale
+            if (vchildren.length > 0 && aligned.every(node => node)) {
+                assigned = aligned;
+                owned = aligned;
+            } else {
+                assigned = vchildren.map((vchild, i) => children[i] && fluid.matchNodeToVNode(children[i], vchild) ? children[i] : undefined);
+                owned = children;
+            }
         }
         const reused = new Set(assigned);
         owned.filter(node => !reused.has(node)).forEach(node => node.remove());
